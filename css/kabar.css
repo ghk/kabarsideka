@@ -1,0 +1,359 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Titillium Web', sans-serif !important;
+    background: url(../res/desa.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*---  HEADER  ---*/
+
+#header {
+    flex: 0 0 100px;
+}
+
+#header .container {
+    width: 1000px;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px 2px #cccccc;
+}
+
+#header .top {
+    height: 70px;
+    padding: 0 20px;
+}
+
+#header .top .logo {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+#header .top .logo:hover {
+    text-decoration: none;
+}
+
+#header .logo img {
+    height: 50px;
+}
+
+#header .logo p {
+    position: relative;
+    top: 3px;
+    padding-left: 5px;
+    display: inline-block;
+    font-size: 18pt;
+    font-weight: 700;
+    color: #333333;
+}
+
+#header .download {
+    position: relative;
+    float: right;
+    top: 27px;
+}
+
+#header .navbar-brand {
+    display: none;
+}
+
+
+/*---  Search  ---*/
+
+#custom-search-input {
+    position: relative;
+    float: right;
+    right: 0;
+    top: 20px;
+    padding: 0;
+    width: 300px;
+    display: inline-block;
+}
+
+#custom-search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    margin-bottom: 0;
+    border-radius: 0;
+    border: 0;
+    border-bottom: solid 1px #888888;
+    box-shadow: none;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    margin-bottom: 0;
+    color: #4075a4;
+}
+
+.search-query:focus+button {
+    z-index: 3;
+}
+
+input.search-query::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+input.search-query::-moz-placeholder {
+    font-style: italic;
+}
+
+input.search-query:-ms-input-placeholder {
+    font-style: italic;
+}
+
+
+/*---  Categories  ---*/
+
+.bottom {
+    background: #223848;
+    align-content: center;
+}
+
+.categories {
+    width: 95%;
+    margin: auto;
+}
+
+
+/*---  Navbar  ---*/
+
+.navbar-nav {
+    float: none !important;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav>li {
+    display: inline-block;
+    float: none;
+}
+
+.navbar {
+    margin-bottom: 0!important;
+}
+
+#categories.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+
+#categories.navbar-default {
+    font-size: 14px;
+    background-color: rgba(34, 56, 72, 1);
+    border-width: 0px;
+    border-radius: 0px;
+}
+
+#categories.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(34, 56, 72, 1);
+}
+
+#categories.navbar-default .navbar-nav>li>a:hover,
+#categories.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(64, 117, 164, 1);
+}
+
+#categories.navbar-default .navbar-nav>.active>a,
+#categories.navbar-default .navbar-nav>.active>a:hover,
+#categories.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(64, 117, 164, 1);
+}
+
+#categories.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+
+#categories.navbar-default .navbar-toggle:hover,
+#categories.navbar-default .navbar-toggle:focus {
+    background-color: #4075a4;
+}
+
+#categories.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
+#categories.navbar-default .navbar-toggle:hover .icon-bar,
+#categories.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #ffffff;
+}
+
+
+/*---  NEWS  ---*/
+
+#news {
+    flex: 1;
+    padding: 0;
+}
+
+#news .container {
+    width: 1000px;
+    background: #ffffff;
+    box-shadow: 0px 2px 5px 2px #cccccc;
+}
+
+#news #post {
+    margin: 0 10px;
+    padding: 20px 10px;
+    border-bottom: solid 1px #dddddd;
+}
+
+#news .post-image {
+    padding: 0;
+}
+
+#news .post-image img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+#news .post-title {
+    font-weight: 600;
+    font-size: 14pt;
+    color: #333333;
+    line-height: 14pt;
+}
+
+#news .post-title:hover {
+    text-decoration: none;
+}
+
+#news .post-info {
+    margin: 5px 0;
+}
+
+.post-info,
+#desa,
+#tag {
+    font-size: 10pt;
+}
+
+
+/*---  FOOTER  ---*/
+
+#footer {
+    flex: 0 0 30px;
+    margin-bottom: 5px;
+}
+
+#footer .container {
+    width: 1000px;
+    padding: 10px 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #223848;
+    box-shadow: 0px 2px 5px 2px #cccccc;
+}
+
+#footer .footer-links a {
+    color: #cccccc;
+}
+
+#footer .footer-links a:hover {
+    text-decoration: none;
+}
+
+#footer #login {
+    float: right;
+}
+
+
+/*---  RESPONSIVE  ---*/
+
+@media (max-width:500px) {
+    #header .top .logo p {
+        display: none;
+    }
+    #header #custom-search-input {
+        position: absolute;
+        width: 60%!important;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    #news .container {
+        padding: 0;
+    }
+    #news .post-info #comments {
+        display: none;
+    }
+    #news #post-preview {
+        display: none;
+    }
+    .post-info,
+    #desa,
+    #tag {
+        font-size: 9pt;
+    }
+    #news .post-info {
+        margin: 2px 0;
+    }
+    /*---  PAGING  ---*/
+    #paging {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width:1000px) {}
+
+@media (max-width:767px) {
+    /*---  HEADER  ---*/
+    #header .container {
+        width: 100%;
+    }
+    #header .download {}
+    #header #custom-search-input {
+        width: 35%;
+        right: -10px;
+    }
+    #header .navbar-brand {
+        display: block;
+    }
+    .navbar .navbar-nav .open .dropdown-menu>li>a {
+        color: #ffffff;
+    }
+    .navbar .navbar-nav .open .dropdown-menu>li>a:hover,
+    .navbar .navbar-nav .open .dropdown-menu>li>a:focus {
+        color: #ffffff;
+    }
+    .navbar .navbar-nav .open .dropdown-menu>.active>a,
+    .navbar .navbar-nav .open .dropdown-menu>.active>a:hover,
+    .navbar .navbar-nav .open .dropdown-menu>.active>a:focus {
+        color: #ffffff;
+        background-color: #4075a4;
+    }
+    .navbar .navbar-header .navbar-brand img {
+        height: 25px;
+        display: inline;
+        margin-right: 10px;
+    }
+    /*---  NEWS  ---*/
+    #news .container {
+        width: 100%;
+        background: #ffffff;
+    }
+    /*---  FOOTER  ---*/
+    #footer .container {
+        width: 100%;
+    }
+}

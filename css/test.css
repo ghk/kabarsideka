@@ -1,0 +1,403 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Titillium Web', sans-serif !important;
+    background: #f0f0f0 !important;
+    
+
+}
+
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+
+/*---  HEADER  ---*/
+
+#header {
+    flex: 0 0 60px;
+}
+
+#header .logo {
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    float: left;
+}
+
+#header .logo:hover {
+    text-decoration: none;
+}
+
+#header .logo img {
+    height: 50px;
+    margin-top: -25px;
+}
+
+#header .logo p {
+    padding-left: 5px;
+    display: inline-block;
+    font-size: 21pt;
+    font-weight: 400;
+    color: #4075a4;
+}
+
+#header .logo span {
+    display: block;
+    line-height: 1px;
+    font-size: 10pt;
+    font-weight: 300;
+    color: #223848;
+}
+
+#header #nav {
+    display: inline-block;
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 5%;
+}
+
+#header #nav a {
+    padding-left: 20px;
+    color: #223848;
+}
+
+#header #nav a:hover {
+    text-decoration: none;
+    color: #4075a4;
+}
+
+#header #nav a i {
+    padding-right: 5px;
+    color: #4075a4;
+}
+
+
+/*---  BANNER  ---*/
+
+#banner {
+    flex: 1;
+    padding: 50px 0;
+}
+
+#banner .left {
+    padding: 120px 0;
+}
+
+#banner .left h1 {
+    font-weight: 600;
+    color: #4075a4;
+}
+
+#banner .left h4 {
+    font-size: 14pt;
+    font-weight: 100;
+    color: #223848;
+    margin-top: 20px;
+}
+
+#banner .left .unduh {
+    margin-top: 80px;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 10pt;
+    color: #333333;
+}
+
+#banner .left .links {
+    margin-top: 20px;
+}
+
+.windows,
+.linux,
+.macos {
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    color: #333333;
+    transition: ease 0.2s;
+}
+
+.windows:hover,
+.linux:hover,
+.macos:hover {
+    transform: translateY(-5px);
+    transition: ease 0.1s;
+    color: #4075a4;
+}
+
+.windows:hover .windowslink {
+    visibility: visible;
+}
+
+.linux:hover .linuxlink {
+    visibility: visible;
+}
+
+.macos:hover .macoslink {
+    visibility: visible;
+}
+
+.windowslink,
+.linuxlink,
+.macoslink {
+    visibility: hidden;
+    position: absolute;
+    bottom: -10px;
+    color: #4075a4;
+    background: #ffffff;
+    padding: 5px 10px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: ease 0.1s;
+}
+
+.windowslink {
+    width: 140px;
+    left: -25px;
+}
+
+.linuxlink {
+    width: 250px;
+    left: -87px;
+    bottom: -54px;
+}
+
+#banner .left .links p {
+    font-weight: 100;
+    line-height: 2;
+    margin-bottom: 0;
+    font-style: normal;
+    color: #333333;
+}
+
+.macoslink {
+    width: 110px;
+    left: -12px;
+}
+
+#banner .left .links img {
+    width: 50px
+}
+
+#banner .left .links h5 {
+    font-size: 9pt;
+    font-weight: 600;
+}
+
+
+/*---  FEATURE  ---*/
+
+#features {
+    flex: 1;
+    padding: 50px 0;
+    background: #ffffff;
+}
+
+.feature {
+    margin-top: 50px;
+    position: relative;
+}
+
+.features-title {
+    text-align: center;
+    margin: 0 0 50px;
+}
+
+.features-title h2 {
+    font-weight: 600;
+    color: #4075a4;
+}
+
+.feature-image img {
+    max-width: 400px;
+    margin: 0 auto;
+    
+    display: block;
+}
+
+.feature-content {
+    margin-top: 30px;
+}
+.feature-content h3{
+    font-size: 16pt;
+    color: #223848;
+}
+.feature-content p {
+    font-size: 11pt; 
+    color: #535353;
+}
+
+.optimum {
+    text-align: right;
+}
+
+.optimum-mobile {
+    display: none;
+}
+
+/*---  SUPPORT  ---*/
+
+#support {
+    flex: 1;
+    padding: 0 0 20px;
+    background: #f8f8f8;
+/*    border-top: solid 1px #cccccc;*/
+    border-bottom: solid 1px #cccccc;
+}
+
+.support-title {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.support-title h2 {
+    font-size: 12pt;    
+    color: #223848;
+}
+
+.support img {
+    max-width: 100px;
+    margin: auto;
+    display: block;
+}
+
+/*---  FOOTER  ---*/
+
+#footer {
+    flex: 0 0 30px;
+    padding-top: 10px;
+}
+
+#footer .version {
+    position: absolute;
+    left: 5%;
+    font-style: italic;
+}
+
+#footer .version p {
+    display: inline-block;
+    margin-right: 20px;
+    color: #333333;
+}
+
+#footer .version a {
+    color: #4075a4;
+}
+
+#footer .footlink {
+    position: absolute;
+    display: inline-block;
+    right: 5%;
+}
+
+#footer .footlink a {
+    margin-left: 20px;
+    font-size: 10pt;
+    color: #333333;
+}
+
+#footer .footlink a:hover {
+    text-decoration: none;
+    color: #4075a4;
+}
+
+
+/*-----    RESPONSIVE    -----*/
+
+@media (max-width:720px) {
+    /*---  HEADER  ---*/
+    #header .logo span {
+        font-size: 8pt;
+    }
+    /*---  BANNER  ---*/
+    #banner .right {
+        display: none;
+    }
+    #banner .left {
+        text-align: center;
+        padding: 0;
+    }
+    #banner .left h1 {
+        font-size: 24pt;
+        font-weight: 600;
+    }
+    #banner .left h4 {
+        font-size: 12pt;
+        font-weight: 100;
+        color: #223848;
+        margin-top: 20px;
+    }
+    #banner .left .unduh p {
+        margin-top: 50px;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 10pt;
+    }
+    .windows,
+    .linux,
+    .macos {
+        margin-top: 10px;
+    }
+    .windows h5,
+    .linux h5,
+    .macos h5 {
+        display: none;
+    }
+    #banner .left .links img {
+        width: 80px
+    }
+    .windowslink,
+    .linuxlink,
+    .macoslink {
+        visibility: visible;
+        position: relative;
+        bottom: 0;
+        left: auto;
+        right: auto;
+        transform: none;
+        margin: 10px auto 20px;
+        font-size: 10pt;
+    }
+    
+    
+    /*---  FEATURE  ---*/
+    .optimum {
+        display: none;
+    }
+    .optimum-mobile {
+        display: block;
+    }
+    
+    #features img {
+        max-width: 200px;
+    }
+    
+    .interface, .optimum-mobile, .cloud {
+        text-align: center;
+    }
+    
+    /*---  SUPPORT  ---*/
+    
+    .support img {
+        margin-bottom: 20px;
+    }
+    
+    /*---  FOOTER  ---*/
+    #footer .version {
+        display: none;
+    }
+    #footer .footlink {
+        display: block;
+        left: 0;
+        text-align: center;
+        line-height: 3;
+        margin: 10px 0;
+    }
+    #footer #nav a {
+        display: block;
+    }
+}
