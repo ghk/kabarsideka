@@ -32,7 +32,7 @@
                 <div id="custom-search-input">
 					<form role="search" method="get" id="searchform" action="/">
 						<div class="input-group">
-							<input type="text" class="search-query form-control" placeholder="Cari kabar" name="s" id="s"/>
+							<input type="text" class="search-query form-control" placeholder="Cari kabar" name="s" id="s" value="<?php echo get_search_query() ?>"/>
 							<span class="input-group-btn">
 							<button class="btn btn-danger" type="button">
 								<span class=" glyphicon glyphicon-search"></span>
@@ -55,26 +55,32 @@
                         </button>
                     </div>
                     <div class="collapse navbar-collapse navbar-menubuilder">
+						<?php
+							$cat_classes = array();
+							if(is_category()){
+								$category = get_category(get_query_var('cat'));
+								$cat_classes[$category->slug] = 'active';
+							}
+						?>
                         <ul class="nav navbar-nav navbar-left">
                             <li><a href="/">Beranda</a>
                             </li>
-                            <li><a href="/kategori/produk">Produk Desa</a>
+                            <li class='<?php echo $cat_classes['produk']?>'><a href="/kategori/produk">Produk Desa</a>
                             </li>
-                            <li><a href="/kategori/potensi">Potensi Desa</a>
+                            <li class='<?php echo $cat_classes['potensi']?>'><a href="/kategori/potensi">Potensi Desa</a>
                             </li>
-                            <li><a href="/kategori/dana-desa">Penggunaan Dana Desa</a>
+                            <li class='<?php echo $cat_classes['dana-desa']?>'><a href="/kategori/dana-desa">Penggunaan Dana Desa</a>
                             </li>
-                            <li><a href="/kategori/seni-kebudayaan">Seni dan Kebudayaan</a>
+                            <li class='<?php echo $cat_classes['seni-kebudayaan']?>'><a href="/kategori/seni-kebudayaan">Seni dan Kebudayaan</a>
                             </li>
-                            <li><a href="/kategori/tokoh">Tokoh Masyarakat</a>
+                            <li class='<?php echo $cat_classes['tokoh']?>'><a href="/kategori/tokoh">Tokoh Masyarakat</a>
                             </li>
-                            <li><a href="/kategori/lingkungan">Lingkungan</a>
+                            <li class='<?php echo $cat_classes['lingkungan']?>'><a href="/kategori/lingkungan">Lingkungan</a>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
