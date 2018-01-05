@@ -44,10 +44,19 @@
                 </div>
             </div>
 
+			<?php
+				$cat_classes = array();
+				$nav_title = "Kabar Desa";
+				if(is_category()){
+					$category = get_category(get_query_var('cat'));
+					$cat_classes[$category->slug] = 'active';
+					$nav_title = $category->name;
+				}
+			?>
             <div id="categories" class="navbar navbar-default " role="navigation">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Kabar dari Desa</a>
+                        <a class="navbar-brand" href="#"><?php echo $nav_title; ?></a>
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
@@ -56,13 +65,6 @@
                         </button>
                     </div>
                     <div class="collapse navbar-collapse navbar-menubuilder">
-						<?php
-							$cat_classes = array();
-							if(is_category()){
-								$category = get_category(get_query_var('cat'));
-								$cat_classes[$category->slug] = 'active';
-							}
-						?>
                         <ul class="nav navbar-nav navbar-left">
                             <li><a href="/">Beranda</a>
                             </li>
