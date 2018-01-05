@@ -211,7 +211,7 @@ input.search-query:-ms-input-placeholder {
 }
 
 #news #post {
-    margin: 0 10px;
+    /*margin: 0 10px;*/
     padding: 20px 10px;
     border-bottom: solid 1px #dddddd;
 }
