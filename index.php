@@ -2,7 +2,7 @@
 
     <!-- News -->
     <section id="news">
-        <div class="container">
+        <div class="container post-container">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<div id="post" class="post col-md-12 col-xs-12">
@@ -19,7 +19,7 @@
 					</a>
                 </div>
                 <div class="post-content col-md-10 col-xs-9">
-                    <a id="post-title" class="post-title" href="#"><?php the_title(); ?></a>
+                    <a id="post-title" class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     <div class="post-info">
                         <a href="#" id="date"><i class="fa fa-calendar"></i> <?php the_date(); ?></a>&emsp;
 						<a href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))) ?>" id="author"><i class="fa fa-user"></i> <?php the_author(); ?></a>&emsp;
@@ -48,49 +48,36 @@
             </div>
 
 			<?php endwhile; endif; ?>
-			
-            <div id="paging" class="paging">
-                <nav class="my-4">
-                    <ul class="pagination pagination-circle pg-blue mb-0">
-
-                        <!--First-->
-                        <li class="page-item disabled"><a class="page-link">First</a></li>
-
-                        <!--Arrow left-->
-                        <li class="page-item disabled">
-                            <a class="page-link" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
-
-                        <!--Numbers-->
-                        <li class="page-item active"><a href="/page/1" class="page-link">1</a></li>
-                        <li class="page-item"><a href="/page/2" class="page-link">2</a></li>
-                        <li class="page-item"><a href="/page/3" class="page-link">3</a></li>
-                        <li class="page-item"><a href="/page/4" class="page-link">4</a></li>
-                        <li class="page-item"><a href="/page/5" class="page-link">5</a></li>
-
-                        <!--Arrow right-->
-                        <li class="page-item">
-                            <a class="page-link" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-
-                        <!--First-->
-                        <li class="page-item"><a class="page-link">Last</a></li>
-
-                    </ul>
-                </nav>
-
-            </div>
-
-
-
-
         </div>
+		
+		<div class="container">
+			<div class="col-md-12 col-xs-12">
+				<div class="page-load-status">
+					<div class="infinite-scroll-request">
+						<div class="loader-ellips">
+						  <span class="loader-ellips__dot"></span>
+						  <span class="loader-ellips__dot"></span>
+						  <span class="loader-ellips__dot"></span>
+						  <span class="loader-ellips__dot"></span>
+						</div>
+					</div>
+			  </div>
+			</div>
+		</div>
+
+		<script type='text/javascript'>
+			var href = window.location.href
+			if(href.endsWith('/')){
+				href = href.substring(0, href.length - 1);
+			}
+			$('#news .post-container').infiniteScroll({
+			  // options
+			  path: href+'/page/{{#}}/',
+			  append: '#post',
+			  history: false,
+			  status: '.page-load-status'
+			});
+		</script>
     </section>
 
 <?php get_footer(); ?>
