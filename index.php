@@ -6,7 +6,7 @@
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<div id="post" class="post col-md-12 col-xs-12">
-                <div class="post-image col-sm-2 col-xs-12">
+                <div class="post-image col-sm-3 col-xs-12">
                     <?php
                     $thumbnail = get_post_meta($post->ID, 'thumbnail_html', true) ;
 						if($thumbnail != "") {
@@ -18,7 +18,7 @@
 					        </a>
 						<?php } ?>
                 </div>
-                <div class="post-content col-sm-10 col-xs-12">
+                <div class="post-content col-sm-9 col-xs-12">
                     <a id="post-title" class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     <div class="post-info">
                         <a href="#" id="date"><i class="fa fa-calendar"></i> <?php the_date(); ?></a>&emsp;
