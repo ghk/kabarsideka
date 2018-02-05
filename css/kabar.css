@@ -356,6 +356,10 @@ input.search-query:-ms-input-placeholder {
     #footer .container {
         width: 100%;
     }
+
+    .post-image img {
+        padding: 0px 15px 20px 15px;
+    }
 }
 
 /* https://infinite-scroll.com/extras.html */
